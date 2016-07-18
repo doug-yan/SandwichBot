@@ -4,17 +4,12 @@
 
 require './sandwich'
 require './extractor'
-require './sandwich'
 
 mySandwich = Sandwich.new
 sandwichParts = Array.new
 
 puts "What kind of sandwich do you want? "
 myOrder = gets
-
-puts "Here is the order: #{myOrder}"
-myOrder.downcase!
-puts "Here is the order in lowercase: #{myOrder}"
 
 #Extract Information
 myExtractor = Extractor.new(myOrder.split)
@@ -40,13 +35,3 @@ end
 
 mySandwich.reviewSandwich
 
-=begin
-mySandwich = Sandwich.new
-mySandwich.setOwner("Doug")
-mySandwich.setBread("wheat")
-mySandwich.setProtein("turkey")
-mySandwich.setTopping("lettuce")
-mySandwich.setTopping("tomatoes")
-mySandwich.setCondiments("mayo")
-mySandwich.reviewSandwich
-=end
